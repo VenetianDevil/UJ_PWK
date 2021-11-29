@@ -181,7 +181,7 @@ class Triangle {
       console.log('przesuniecie', M_translation)
 
       // var M_translation = new Matrix([[1, 0, 130], [0, 1, -210], [0, 0, 1]]);
-      let M_transformation = M_translation.multiplyByMatrix(M_3); // Dlaczego to działa jak zamieniłam macierze kolejnosciami????????? powinny być na odwrót ale wtedy działa tylko w 1 przypadku, po zamianie działa w obu
+      let M_transformation = M_translation.multiplyByMatrix(M_3);
       // console.log(M_transformation)
       return M_transformation;
     })
