@@ -10,10 +10,7 @@ class Vertice {
     this.south = edges_to.south || []; // dol
     this.west = edges_to.west || []; // lewo
 
-    console.info("instr: ", instructions)
-    console.info(instructions.ratio[0])
     this.ratio_x = instructions.ratio ? instructions.ratio[0] : null; // 0-1
-    console.info(this.ratio_x)
     this.ratio_y = instructions.ratio ? instructions.ratio[1] : null; // 0-1
     this.upLeft = instructions.upLeft; // center of the symbol obj
     this.color = instructions.color;

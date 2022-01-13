@@ -16,7 +16,6 @@ class Production {
       var toChangeId = toChange.id;
       
       this.right_graph = this.right_graph_constructors[this.id](toChange);
-      console.log(this.right_graph);
       
       let northConnects = [];
       let southConnects = [];
@@ -107,7 +106,6 @@ class Production {
     var x_0 = changingVertice.upLeft.x;
     var y_0 = changingVertice.upLeft.y;
     var fb_y_ratio = (((canvas.height * changingVertice.ratio_y) - 200) / 2) / canvas.height;
-    console.log("prev ratio x / 2", changingVertice.ratio_x / 2);
     // prod 1
     var flowerbed1 = new Vertice("flowerbed", {},
       { ratio: [changingVertice.ratio_x / 2, fb_y_ratio], upLeft: new Point(x_0, y_0), color: 'pink' }
@@ -144,7 +142,6 @@ class Production {
     var x_0 = changingVertice.upLeft.x;
     var y_0 = changingVertice.upLeft.y;
     var fb_y_ratio = changingVertice.ratio_y / 5;
-    console.log("prev ratio x / 2", changingVertice.ratio_x / 2);
     // prod 1
     var flowerbed1 = new Vertice("flowerbed", {},
       { ratio: [changingVertice.ratio_x, fb_y_ratio], upLeft: new Point(x_0, y_0), color: 'pink' }
@@ -158,11 +155,11 @@ class Production {
       { ratio: [changingVertice.ratio_x, fb_y_ratio], upLeft: new Point(x_0,  y_0 + (2* canvas.height * fb_y_ratio)), color: 'gray' }
     );
 
-    var flowerbed4 = new Vertice("flowerbed", {},
+    var flowerbed3 = new Vertice("flowerbed", {},
       { ratio: [changingVertice.ratio_x, fb_y_ratio], upLeft: new Point(x_0, y_0 + (3* canvas.height * fb_y_ratio)) , color: 'pink' }
     );
 
-    var flowerbed3 = new Vertice("flowerbed", {},
+    var flowerbed4 = new Vertice("flowerbed", {},
       { ratio: [changingVertice.ratio_x, fb_y_ratio], upLeft: new Point(x_0, y_0 + (4*canvas.height * fb_y_ratio)), color: 'pink' }
     );
 

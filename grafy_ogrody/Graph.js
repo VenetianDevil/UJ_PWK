@@ -11,19 +11,19 @@ class Graph {
     for (let i = 0; i<to_v_ids.length; i++){
       var to_ver = this.vertices.find(ver => ver.id == to_v_ids[i]);
 
-      if (on_side == "north") {
+      if (on_side[i] == "north") {
         to_ver.north.push(new_v.id);
         new_v.south.push(to_ver.id);
       }
-      else if (on_side == "south") {
+      else if (on_side[i] == "south") {
         to_ver.south.push(new_v.id);
         new_v.north.push(to_ver.id);
       }
-      else if (on_side == "east") {
+      else if (on_side[i] == "east") {
         to_ver.east.push(new_v.id);
         new_v.west.push(to_ver.id);
       }
-      else if (on_side == "west") {
+      else if (on_side[i] == "west") {
         to_ver.west.push(new_v.id);
         new_v.east.push(to_ver.id);
       }
