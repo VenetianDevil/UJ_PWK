@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <section>
+    <canvas id="garden_canvas" width="1000" height="800" style="border: 2px solid black; background-color: lightgreen; float: left;"></canvas>
+  </section>
+
+  <aside style="height: 800px;">
+    <h1></h1>
+    
+    <h2>Prod 0 Ogród -> <button onclick="applyProduction(0)"> Prod 0 </button></h2>
+    <p>Trawa - <span style="color: brown">Mostek</span> - Trawa</p>
+    
+    <h2>Prod 5 Ogród -> <button onclick="applyProduction(5)"> Prod 5 </button></h2>
+    <p>Trawa - <span style="color: purple">Altanka</span> - Trawa</p>
+
+    <h2>Prod 1 Trawa -> <button onclick="applyProduction(1)"> Prod 1 </button></h2>
+    <p style="color: pink;"> Rabatka - Rabatka <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+      <span style="color: lightblue">&nbsp;&nbsp;&nbsp;&nbsp;Fontanna</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+      <span style="color: piink">Rabatka - Rabatka</span>
+    </p>
+    
+    <h2>Prod 2 Trawa -> <button onclick="applyProduction(2)"> Prod 2 </button></h2>
+    <p>
+      <span style="color: pink">Rabatka</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+      <span style="color: pink">Rabatka</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+      <span style="color: gray">Posąg</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+      <span style="color: pink">Rabatka</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+      <span style="color: pink">Rabatka</span>
+
+    </p>
+    
+    <h2>Prod 3 Rabatka -> <button onclick="applyProduction(3)"> Prod 3 </button></h2>
+    <p style="color: red;">Róże</p>
+
+    <h2>Prod 4 Rabatka -> <button onclick="applyProduction(4)"> Prod 4 </button></h2>
+    <p style="color: yellow; background-color: black;">Tulipany</p>
+  </aside>
+
+<!--   
+  <section>
+    <button onclick="applyProduction(1)"> Prod 2 </button>
+    <button onclick="applyProduction(2)"> Prod 3 </button>
+    <button onclick="applyProduction(3)"> Prod 4 </button>
+  </section>
+   -->
+
+   <section id="comments">
+   </section>
+
+  <script src="./Point.js"></script>
+  <script src="./Graph.js"></script>
+  <script src="./Vertice.js"></script>
+  <script src="./Production.js"></script>
+  <script type="text/javascript" src="./index.js"></script>
+
+</body>
+</html>
