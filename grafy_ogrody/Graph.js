@@ -3,7 +3,7 @@ class Graph {
     this.vertices = [];
   }
 
-  addVertice(v1) {
+  addVertex(v1) {
     this.vertices.push(v1);
   }
 
@@ -31,14 +31,14 @@ class Graph {
       // console.log(to_ver);
       // console.log(this.vertices.find(ver => ver.id == to_v_ids[i]));
     }
-    this.addVertice(new_v);
+    this.addVertex(new_v);
   }
 
   draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    this.vertices.forEach(vertice => {
-      vertice.draw();
+    this.vertices.forEach(vertex=> {
+      vertex.draw();
     });
   }
 

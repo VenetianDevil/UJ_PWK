@@ -76,59 +76,59 @@ class Production {
 
   }
   
-  constuct_right_graph_0(changingVertice){
+  constuct_right_graph_0(changingVertex){
     //gorny lewy row zmienianego 
-    var x_0 = changingVertice.upLeft.x;
-    var y_0 = changingVertice.upLeft.y;
+    var x_0 = changingVertex.upLeft.x;
+    var y_0 = changingVertex.upLeft.y;
     // prod 1
-    var grass1 = new Vertice("grass", {},
-      { ratio: [changingVertice.ratio_x / 3, changingVertice.ratio_y], upLeft: new Point(x_0, y_0), color: 'transparent' }
+    var grass1 = new Vertex("grass", {},
+      { ratio: [changingVertex.ratio_x / 3, changingVertex.ratio_y], upLeft: new Point(x_0, y_0), color: 'transparent' }
     );
     
-    var bridge = new Vertice("bridge", {},
-      { ratio: [changingVertice.ratio_x / 3, changingVertice.ratio_y], upLeft: new Point(x_0+((changingVertice.ratio_x * canvas.width) / 3), y_0), color: 'brown' }
+    var bridge = new Vertex("bridge", {},
+      { ratio: [changingVertex.ratio_x / 3, changingVertex.ratio_y], upLeft: new Point(x_0+((changingVertex.ratio_x * canvas.width) / 3), y_0), color: 'brown' }
     );
     
-    var grass2 = new Vertice("grass", {},
-      { ratio: [changingVertice.ratio_x / 3, changingVertice.ratio_y], upLeft: new Point(x_0+((2*changingVertice.ratio_x * canvas.width) / 3), y_0), color: 'transparent' }
+    var grass2 = new Vertex("grass", {},
+      { ratio: [changingVertex.ratio_x / 3, changingVertex.ratio_y], upLeft: new Point(x_0+((2*changingVertex.ratio_x * canvas.width) / 3), y_0), color: 'transparent' }
     );
 
     var right_graph = new Graph();
-    right_graph.addVertice(grass1);
+    right_graph.addVertex(grass1);
     right_graph.attachVerticleTo(bridge, [grass1.id], ["east"]);
     right_graph.attachVerticleTo(grass2, [bridge.id], ["east"]);
 
     return right_graph;
   }
 
-  constuct_right_graph_1(changingVertice){
+  constuct_right_graph_1(changingVertex){
     //gorny lewy row zmienianego 
-    var x_0 = changingVertice.upLeft.x;
-    var y_0 = changingVertice.upLeft.y;
-    var fb_y_ratio = (((canvas.height * changingVertice.ratio_y) - 200) / 2) / canvas.height;
+    var x_0 = changingVertex.upLeft.x;
+    var y_0 = changingVertex.upLeft.y;
+    var fb_y_ratio = (((canvas.height * changingVertex.ratio_y) - 200) / 2) / canvas.height;
     // prod 1
-    var flowerbed1 = new Vertice("flowerbed", {},
-      { ratio: [changingVertice.ratio_x / 2, fb_y_ratio], upLeft: new Point(x_0, y_0), color: 'pink' }
+    var flowerbed1 = new Vertex("flowerbed", {},
+      { ratio: [changingVertex.ratio_x / 2, fb_y_ratio], upLeft: new Point(x_0, y_0), color: 'pink' }
     );
     
-    var flowerbed2 = new Vertice("flowerbed", {},
-      { ratio: [changingVertice.ratio_x / 2, fb_y_ratio], upLeft: new Point(x_0 + ((canvas.width * changingVertice.ratio_x) / 2), y_0), color: 'pink' }
+    var flowerbed2 = new Vertex("flowerbed", {},
+      { ratio: [changingVertex.ratio_x / 2, fb_y_ratio], upLeft: new Point(x_0 + ((canvas.width * changingVertex.ratio_x) / 2), y_0), color: 'pink' }
     );
     
-    var flowerbed3 = new Vertice("flowerbed", {},
-      { ratio: [changingVertice.ratio_x / 2, fb_y_ratio], upLeft: new Point(x_0, y_0 + 200 + (canvas.height * fb_y_ratio)), color: 'pink' }
+    var flowerbed3 = new Vertex("flowerbed", {},
+      { ratio: [changingVertex.ratio_x / 2, fb_y_ratio], upLeft: new Point(x_0, y_0 + 200 + (canvas.height * fb_y_ratio)), color: 'pink' }
     );
 
-    var flowerbed4 = new Vertice("flowerbed", {},
-      { ratio: [changingVertice.ratio_x / 2, fb_y_ratio], upLeft: new Point(x_0 + ((canvas.width * changingVertice.ratio_x) / 2), y_0 + 200 + (canvas.height * fb_y_ratio)) , color: 'pink' }
+    var flowerbed4 = new Vertex("flowerbed", {},
+      { ratio: [changingVertex.ratio_x / 2, fb_y_ratio], upLeft: new Point(x_0 + ((canvas.width * changingVertex.ratio_x) / 2), y_0 + 200 + (canvas.height * fb_y_ratio)) , color: 'pink' }
     );
 
-    var fountain = new Vertice("fountain", {},
-      { ratio: [changingVertice.ratio_x, 200/canvas.height], upLeft: new Point(x_0, y_0 + (canvas.height * fb_y_ratio)), color: 'lightblue' }
+    var fountain = new Vertex("fountain", {},
+      { ratio: [changingVertex.ratio_x, 200/canvas.height], upLeft: new Point(x_0, y_0 + (canvas.height * fb_y_ratio)), color: 'lightblue' }
     );
 
     var right_graph = new Graph();
-    right_graph.addVertice(fountain);
+    right_graph.addVertex(fountain);
     right_graph.attachVerticleTo(flowerbed1, [fountain.id], ["north"]);
     right_graph.attachVerticleTo(flowerbed2, [fountain.id, flowerbed1.id], ["north", "east"]);
     right_graph.attachVerticleTo(flowerbed3, [fountain.id], ["south"]);
@@ -137,34 +137,34 @@ class Production {
     return right_graph;
   }
 
-  constuct_right_graph_2(changingVertice){
+  constuct_right_graph_2(changingVertex){
     //gorny lewy row zmienianego 
-    var x_0 = changingVertice.upLeft.x;
-    var y_0 = changingVertice.upLeft.y;
-    var fb_y_ratio = changingVertice.ratio_y / 5;
+    var x_0 = changingVertex.upLeft.x;
+    var y_0 = changingVertex.upLeft.y;
+    var fb_y_ratio = changingVertex.ratio_y / 5;
     // prod 1
-    var flowerbed1 = new Vertice("flowerbed", {},
-      { ratio: [changingVertice.ratio_x, fb_y_ratio], upLeft: new Point(x_0, y_0), color: 'pink' }
+    var flowerbed1 = new Vertex("flowerbed", {},
+      { ratio: [changingVertex.ratio_x, fb_y_ratio], upLeft: new Point(x_0, y_0), color: 'pink' }
     );
     
-    var flowerbed2 = new Vertice("flowerbed", {},
-      { ratio: [changingVertice.ratio_x, fb_y_ratio], upLeft: new Point(x_0,  y_0 + (canvas.height * fb_y_ratio)), color: 'pink' }
+    var flowerbed2 = new Vertex("flowerbed", {},
+      { ratio: [changingVertex.ratio_x, fb_y_ratio], upLeft: new Point(x_0,  y_0 + (canvas.height * fb_y_ratio)), color: 'pink' }
     );
     
-    var statue = new Vertice("statue", {},
-      { ratio: [changingVertice.ratio_x, fb_y_ratio], upLeft: new Point(x_0,  y_0 + (2* canvas.height * fb_y_ratio)), color: 'gray' }
+    var statue = new Vertex("statue", {},
+      { ratio: [changingVertex.ratio_x, fb_y_ratio], upLeft: new Point(x_0,  y_0 + (2* canvas.height * fb_y_ratio)), color: 'gray' }
     );
 
-    var flowerbed3 = new Vertice("flowerbed", {},
-      { ratio: [changingVertice.ratio_x, fb_y_ratio], upLeft: new Point(x_0, y_0 + (3* canvas.height * fb_y_ratio)) , color: 'pink' }
+    var flowerbed3 = new Vertex("flowerbed", {},
+      { ratio: [changingVertex.ratio_x, fb_y_ratio], upLeft: new Point(x_0, y_0 + (3* canvas.height * fb_y_ratio)) , color: 'pink' }
     );
 
-    var flowerbed4 = new Vertice("flowerbed", {},
-      { ratio: [changingVertice.ratio_x, fb_y_ratio], upLeft: new Point(x_0, y_0 + (4*canvas.height * fb_y_ratio)), color: 'pink' }
+    var flowerbed4 = new Vertex("flowerbed", {},
+      { ratio: [changingVertex.ratio_x, fb_y_ratio], upLeft: new Point(x_0, y_0 + (4*canvas.height * fb_y_ratio)), color: 'pink' }
     );
 
     var right_graph = new Graph();
-    right_graph.addVertice(flowerbed1);
+    right_graph.addVertex(flowerbed1);
     right_graph.attachVerticleTo(flowerbed2, [flowerbed1.id], ["south"]);
     right_graph.attachVerticleTo(statue, [flowerbed2.id], ["south"]);
     right_graph.attachVerticleTo(flowerbed3, [statue.id], ["south"]);
@@ -173,55 +173,55 @@ class Production {
     return right_graph;
   }
 
-  constuct_right_graph_3(changingVertice){
+  constuct_right_graph_3(changingVertex){
     //gorny lewy row zmienianego 
-    var x_0 = changingVertice.upLeft.x;
-    var y_0 = changingVertice.upLeft.y;
+    var x_0 = changingVertex.upLeft.x;
+    var y_0 = changingVertex.upLeft.y;
     // prod 1
-    var roses = new Vertice("roses", {},
-      { ratio: [changingVertice.ratio_x, changingVertice.ratio_y], upLeft: new Point(x_0, y_0), color: 'red' }
+    var roses = new Vertex("roses", {},
+      { ratio: [changingVertex.ratio_x, changingVertex.ratio_y], upLeft: new Point(x_0, y_0), color: 'red' }
     );
 
     var right_graph = new Graph();
-    right_graph.addVertice(roses);
+    right_graph.addVertex(roses);
 
     return right_graph;
   }
 
-  constuct_right_graph_4(changingVertice){
+  constuct_right_graph_4(changingVertex){
     //gorny lewy row zmienianego 
-    var x_0 = changingVertice.upLeft.x;
-    var y_0 = changingVertice.upLeft.y;
+    var x_0 = changingVertex.upLeft.x;
+    var y_0 = changingVertex.upLeft.y;
     // prod 1
-    var tulips = new Vertice("tulips", {},
-      { ratio: [changingVertice.ratio_x, changingVertice.ratio_y], upLeft: new Point(x_0, y_0), color: 'yellow' }
+    var tulips = new Vertex("tulips", {},
+      { ratio: [changingVertex.ratio_x, changingVertex.ratio_y], upLeft: new Point(x_0, y_0), color: 'yellow' }
     );
 
     var right_graph = new Graph();
-    right_graph.addVertice(tulips);
+    right_graph.addVertex(tulips);
 
     return right_graph;
   }
 
-  constuct_right_graph_5(changingVertice){
+  constuct_right_graph_5(changingVertex){
     //gorny lewy row zmienianego 
-    var x_0 = changingVertice.upLeft.x;
-    var y_0 = changingVertice.upLeft.y;
+    var x_0 = changingVertex.upLeft.x;
+    var y_0 = changingVertex.upLeft.y;
     // prod 1
-    var grass1 = new Vertice("grass", {},
-      { ratio: [changingVertice.ratio_x / 3, changingVertice.ratio_y], upLeft: new Point(x_0, y_0), color: 'transparent' }
+    var grass1 = new Vertex("grass", {},
+      { ratio: [changingVertex.ratio_x / 3, changingVertex.ratio_y], upLeft: new Point(x_0, y_0), color: 'transparent' }
     );
     
-    var gazebo = new Vertice("gazebo", {},
-      { ratio: [changingVertice.ratio_x / 3, changingVertice.ratio_y], upLeft: new Point(x_0+((changingVertice.ratio_x * canvas.width) / 3), y_0), color: 'purple' }
+    var gazebo = new Vertex("gazebo", {},
+      { ratio: [changingVertex.ratio_x / 3, changingVertex.ratio_y], upLeft: new Point(x_0+((changingVertex.ratio_x * canvas.width) / 3), y_0), color: 'purple' }
     );
     
-    var grass2 = new Vertice("grass", {},
-      { ratio: [changingVertice.ratio_x / 3, changingVertice.ratio_y], upLeft: new Point(x_0+((2*changingVertice.ratio_x * canvas.width) / 3), y_0), color: 'transparent' }
+    var grass2 = new Vertex("grass", {},
+      { ratio: [changingVertex.ratio_x / 3, changingVertex.ratio_y], upLeft: new Point(x_0+((2*changingVertex.ratio_x * canvas.width) / 3), y_0), color: 'transparent' }
     );
 
     var right_graph = new Graph();
-    right_graph.addVertice(grass1);
+    right_graph.addVertex(grass1);
     right_graph.attachVerticleTo(gazebo, [grass1.id], ["east"]);
     right_graph.attachVerticleTo(grass2, [gazebo.id], ["east"]);
 

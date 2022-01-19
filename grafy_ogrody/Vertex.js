@@ -1,6 +1,6 @@
 var v_id = 1;
 
-class Vertice {
+class Vertex {
   constructor(type, edges_to, instructions) {
     this.id = v_id++;
     this.type = type;
